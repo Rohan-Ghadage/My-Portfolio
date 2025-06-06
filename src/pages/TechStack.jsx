@@ -14,15 +14,18 @@ const TechStack = () => {
       <h4 className="uppercase text-sm tracking-widest text-gray-400 mb-2">
         I constantly try to improve
       </h4>
-      <h2 className="text-4xl sm:text-5xl font-bold mb-12">My Tech Stack</h2>
+      <h2 className="text-4xl sm:text-5xl font-bold mb-12">
+        <em className="animated-gradient-text font-[NyghtSerif]">My Tech Stack</em>
+      </h2>
+
 
       <div className="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto text-left">
         {/* Frontend */}
         <div className="space-y-4">
           <h3 className="text-xl font-semibold text-purple-400 mb-2">Frontend</h3>
           <div className="flex flex-wrap gap-3">
-            <TechIcon icon={<FaJs />} label="JavaScript" color="#F7DF1E" />
             <TechIcon icon={<FaReact />} label="ReactJS" color="#61DAFB" />
+            <TechIcon icon={<FaJs />} label="JavaScript" color="#F7DF1E" />
             <TechIcon icon={<SiTailwindcss />} label="Tailwind CSS" color="#38BDF8" />
             <TechIcon icon={<SiRedux />} label="Redux" color="#764ABC" />
             <TechIcon icon={<SiShadcnui />} label="Shadcn UI" color="#ffffff" />

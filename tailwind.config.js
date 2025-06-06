@@ -7,12 +7,18 @@ export default {
   theme: {
     extend: {
       animation: {
-        'pulse-slow': 'pulseGlow 4s ease-in-out infinite',
+        'gradient-x': 'gradient-x 6s ease infinite',
+      },
+      backgroundImage: {
+        'gradient-animated': 'linear-gradient(270deg, #8b5cf6, #3b82f6, #ec4899)', // violet, blue, pink
+      },
+      backgroundSize: {
+        '300': '300% 300%',
       },
       keyframes: {
-        glowPulse: {
-          '0%, 100%': { opacity: '0.6', transform: 'scaleX(1)' },
-          '50%': { opacity: '0.9', transform: 'scaleX(1.05)' },
+        'gradient-x': {
+          '0%, 100%': { backgroundPosition: '0% 50%' },
+          '50%': { backgroundPosition: '100% 50%' },
         },
       },
     },
