@@ -1,3 +1,4 @@
+import ContactSection from "./pages/ContactSection";
 import Hero from "./pages/Hero";
 import Navbar from "./pages/Navbar";
 import ProjectShowcase from "./pages/ProjectShowcase";
@@ -14,7 +15,7 @@ export default function App() {
       <Hero />
       <TechStack />
       <ProjectShowcase />
-
+      <ContactSection />
     </div>
     
   )
