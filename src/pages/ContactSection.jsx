@@ -77,27 +77,28 @@ const ContactSection = () => {
 
 
         <div className="relative">
-          <img
-            aria-hidden="true"
-            draggable="false"
-            width="160"
-            height="30"
-            src="bg.png"
-            alt="wings"
-            className="select-none"
-          />
-          <img
-            alt="Rohan Logo"
-            draggable="false"
-            loading="lazy"
-            width="100"
-            height="100"
-            decoding="async"
-            className="absolute top-1/2 left-1/2 z-50 w-8 -translate-x-1/2 -translate-y-1/2 md:w-10"
-            style={{ color: "transparent" }}
-            src="logo.png"
-          />
+          
+          
         </div>
+       
+        <a href="/" className="inline-block relative w-fit">
+            {/* <!-- Wings Image --> */}
+          <img
+            src="wings.png"  
+            alt="Wings"
+            className="w-[150px] md:w-[300px] lg:w-[250px]"
+          />
+
+          <div
+            className="absolute inset-0 flex items-center justify-center"
+          >
+            <div className="text-white font-bold text-[40px] md:text-[80px] lg:text-[50px]">
+              <span className="text-white">R</span>
+              <span className="text-yellow-500">G</span>
+            </div>
+          </div>
+        </a>
+
 
         {/* Text content */}
         <span className="mt-4 text-2xl font-light tracking-wide text-white sm:text-4xl lg:text-5xl">
