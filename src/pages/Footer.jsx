@@ -1,6 +1,6 @@
 import React from "react";
 
-const Footer = () => {
+const Footer = ({setIsPopupOpen}) => {
   return (
     <footer className="relative mx-auto mb-8 max-w-6xl">
       <div className="px-4 lg:mx-auto lg:flex lg:px-4 xl:px-0">
@@ -94,6 +94,32 @@ const Footer = () => {
                 <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path>
               </svg>
             </a>
+
+            {/* Instagram */}
+            <a
+              href="https://www.instagram.com/rohang_1809/profilecard/?igsh=M3UydjJvYjEyMDMy"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-neutral-300 transition-colors hover:text-neutral-100"
+            >
+              <span className="sr-only">Instagram</span>
+              <svg
+                className="stroke-1"
+                stroke="currentColor"
+                fill="none"
+                strokeWidth="1.5"
+                viewBox="0 0 24 24"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                height="20"
+                width="20"
+              >
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <circle cx="12" cy="12" r="3.5"></circle>
+                <circle cx="18" cy="6" r="1.5"></circle>
+              </svg>
+            </a>
+
           </div>
         </div>
 
@@ -123,10 +149,10 @@ const Footer = () => {
             <div>
               <span className="text-text-primary mb-4 inline-block text-base font-medium">Specifics</span>
               <ul className="flex flex-col gap-y-2 text-sm text-gray-300">
-                <li className="hover:text-text-primary">
-                  <a href="/guestbook" className="footer-link">Guest Book</a>
+                <li className="hover:text-text-primary pointer-events-none opacity-50">
+                  <a href="/#" className="footer-link">Guest Book</a>
                 </li>
-                <li className="hover:text-text-primary">
+                <li className="hover:text-text-primary pointer-events-none opacity-50">
                   <a href="/bucket-list" className="footer-link">Bucket List</a>
                 </li>
                 <li className="hover:text-text-primary pointer-events-none opacity-50">
@@ -143,14 +169,21 @@ const Footer = () => {
               <span className="text-text-primary mb-4 inline-block text-base font-medium">More</span>
               <ul className="flex flex-col gap-y-2 text-sm text-gray-300">
                 <li className="hover:text-text-primary">
-                  <a href="/contact" className="footer-link">Contact</a>
+                  <a 
+                    href="#"
+                    onClick={(e) => {
+                      e.preventDefault();  // prevent scroll to top
+                      setIsPopupOpen(true);
+                    }}
+                    className="footer-link"
+                  >
+                    Contact
+                  </a>
                 </li>
                 <li className="hover:text-text-primary">
-                  <a href="/links" className="footer-link">Links</a>
+                  <a href="/more" className="footer-link">Links</a>
                 </li>
-                <li className="hover:text-text-primary">
-                  <a href="/rss" className="footer-link">RSS</a>
-                </li>
+                
               </ul>
             </div>
           </div>

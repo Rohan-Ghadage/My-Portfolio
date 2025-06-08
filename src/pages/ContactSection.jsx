@@ -1,6 +1,6 @@
 import React from "react";
 
-const ContactSection = () => {
+const ContactSection = ({setIsPopupOpen}) => {
   return (
     <section
       id="contact"
@@ -116,10 +116,7 @@ const ContactSection = () => {
             type="button"
             className="group relative inline-flex cursor-pointer items-center justify-between overflow-hidden rounded-full border border-white/10 bg-white/10 py-[3px] pr-[3px] pl-2 text-base font-medium opacity-85 backdrop-blur-xs transition-all hover:bg-transparent md:py-1 md:pr-1 md:pl-3
           group-hover:scale-125"
-            onClick={() => {
-              // Customize: scroll to contact form or open modal here
-              alert("Get in touch clicked!");
-            }}
+          onClick={() => setIsPopupOpen(true)}
           >
             <span className="z-10 px-3 text-white transition-colors duration-300 group-hover:text-black">
               Get In Touch

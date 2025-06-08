@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 
-const Hero = () => {
+const Hero = ({setIsPopupOpen}) => {
   return (
    
     <motion.section
@@ -37,7 +37,10 @@ const Hero = () => {
 
       {/* CTA Section */}
       <div className="mt-10 flex flex-col sm:flex-row gap-4 items-center">
-        <button className="group border border-white px-6 py-2 rounded-full font-semibold flex items-center gap-3 transition-all duration-300 hover:bg-white">
+        <button 
+          onClick={() => setIsPopupOpen(true)}
+          className="group border border-white px-6 py-2 rounded-full font-semibold flex items-center gap-3 transition-all duration-300 hover:bg-white"
+        >
           <span className="text-white group-hover:text-black transition duration-300">
             Let's Connect
           </span>

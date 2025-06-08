@@ -1,4 +1,5 @@
 import React from 'react';
+import './AboutSection.css';  // We'll define CSS animation here
 
 const AboutSection = ({
   title,
@@ -7,7 +8,6 @@ const AboutSection = ({
   paragraphs,
   socialLinks,
   cards,
-  caption,
 }) => {
   return (
     <div className="relative mx-auto max-w-6xl px-4 pt-28 pb-12 md:pt-36 md:pb-20">
@@ -54,37 +54,45 @@ const AboutSection = ({
         </div>
 
         {/* Card Stack */}
-        <div className="relative flex h-[350px] w-full max-w-[200px] flex-col items-center justify-center max-lg:mt-12 lg:h-[450px] lg:max-w-[270px] lg:me-20">
+        <div className="relative flex h-[350px] w-full max-w-[200px] flex-col items-center justify-center max-lg:mt-12 lg:h-[450px] lg:max-w-[270px] lg:me-20 overflow-hidden">
           <div className="relative h-full w-full">
-            {cards.map(({ src, alt, style, zIndex }, index) => (
+            {cards.map(({ src, alt, caption, zIndex, animationDelay }, index) => (
+              
               <div
                 key={index}
+                className="absolute"
                 style={{
-                  position: 'absolute',
-                  transition: '0.6s cubic-bezier(0.23, 1, 0.32, 1)',
-                  borderRadius: '30px',
-                  boxShadow: 'rgba(0, 0, 0, 0.5) 0px 10px 30px',
-                  ...style,
                   zIndex: zIndex,
                 }}
               >
-                <div className="relative aspect-4/5 w-[220px] lg:w-[300px]">
+                <div
+                  className="relative aspect-4/5 w-[220px] lg:w-[300px] rounded-3xl overflow-hidden shadow-lg animate-fade-in-out"
+                  style={{
+                    animationDelay: animationDelay,
+                    boxShadow: 'rgba(0, 0, 0, 0.5) 0px 10px 30px',
+                  }}
+                >
                   <img
                     src={src}
                     alt={alt}
                     draggable="false"
                     decoding="async"
-                    className="rounded-3xl object-cover absolute h-full w-full inset-0"
+                    className="object-cover h-full w-full"
                   />
                 </div>
+                {/* Caption */}
+                <h3
+                  className="mt-2 text-center text-white text-base font-light animate-fade-in-out"
+                  style={{
+                    animationDelay: animationDelay,
+                  }}
+                >
+                  {caption}
+                </h3>
               </div>
+              
             ))}
           </div>
-
-          {/* Caption */}
-          <h3 className="text-center text-2xl font-light transition-opacity duration-500">
-            {caption}
-          </h3>
         </div>
       </div>
     </div>
