@@ -1,5 +1,5 @@
 import React from 'react';
-import './AboutSection.css';  // We'll define CSS animation here
+import './AboutSection.css';
 
 const AboutSection = ({
   title,
@@ -23,7 +23,9 @@ const AboutSection = ({
         </p>
         <span>
           Hi there! I'm{' '}
-          <span className={`${highlightClass} animate-gradient-x font-nyght tracking-wide`}>
+          <span
+            className={`${highlightClass} animated-gradient-text font-nyght tracking-wide`}
+          >
             {name}
           </span>
         </span>
@@ -31,8 +33,8 @@ const AboutSection = ({
 
       <div className="flex flex-col items-center justify-between lg:flex-row">
         {/* About Text */}
-        <div className="relative z-5 mx-auto flex max-w-xl flex-col gap-y-8 text-center text-base font-light tracking-wider text-white/70 lg:mx-0 lg:max-w-[550px] lg:text-left lg:text-lg">
-          {paragraphs.map((para, index) => (
+        <div className="relative z-5 mx-auto flex max-w-xl flex-col gap-y-8 text-center text-lg font-normal tracking-wide text-white/80 lg:mx-0 lg:max-w-[600px] lg:text-left lg:text-xl">
+             {paragraphs.map((para, index) => (
             <p key={index}>{para}</p>
           ))}
 
@@ -54,43 +56,27 @@ const AboutSection = ({
         </div>
 
         {/* Card Stack */}
-        <div className="relative flex h-[350px] w-full max-w-[200px] flex-col items-center justify-center max-lg:mt-12 lg:h-[450px] lg:max-w-[270px] lg:me-20 overflow-hidden">
+        <div className="relative flex h-[350px] w-full max-w-[200px] flex-col items-center justify-center max-lg:mt-12 lg:h-[450px] lg:max-w-[270px] lg:me-20">
           <div className="relative h-full w-full">
-            {cards.map(({ src, alt, caption, zIndex, animationDelay }, index) => (
-              
+            {cards.map(({ src, alt, caption }, index) => (
               <div
                 key={index}
-                className="absolute"
+                className="card-animate"
                 style={{
-                  zIndex: zIndex,
+                  animationDelay: `${index * 2}s`,
                 }}
               >
-                <div
-                  className="relative aspect-4/5 w-[220px] lg:w-[300px] rounded-3xl overflow-hidden shadow-lg animate-fade-in-out"
-                  style={{
-                    animationDelay: animationDelay,
-                    boxShadow: 'rgba(0, 0, 0, 0.5) 0px 10px 30px',
-                  }}
-                >
+                <div className="relative aspect-4/5 w-[220px] lg:w-[300px] card-img">
                   <img
                     src={src}
                     alt={alt}
                     draggable="false"
                     decoding="async"
-                    className="object-cover h-full w-full"
+                    className="object-cover h-full w-full rounded-3xl"
                   />
                 </div>
-                {/* Caption */}
-                <h3
-                  className="mt-2 text-center text-white text-base font-light animate-fade-in-out"
-                  style={{
-                    animationDelay: animationDelay,
-                  }}
-                >
-                  {caption}
-                </h3>
+                <h3 className="card-caption">{caption}</h3>
               </div>
-              
             ))}
           </div>
         </div>

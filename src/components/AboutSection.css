@@ -1,21 +1,47 @@
-@keyframes fade-in-out {
+@keyframes rotateCards {
   0% {
-    opacity: 0;
+    left: 95%;
+    transform: translateX(-50%) perspective(1000px) scale(0.85) rotateY(45deg);
+    z-index: 1;
+    filter: brightness(0.7);
   }
-  10% {
-    opacity: 1;
+  33% {
+    left: 50%;
+    transform: translateX(-50%) perspective(1000px) scale(1) rotateY(0deg);
+    z-index: 3;
+    filter: brightness(1);
   }
-  40% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
+  66% {
+    left: 5%;
+    transform: translateX(-50%) perspective(1000px) scale(0.85) rotateY(-45deg);
+    z-index: 1;
+    filter: brightness(0.7);
   }
   100% {
-    opacity: 0;
+    left: 95%;
+    transform: translateX(-50%) perspective(1000px) scale(0.85) rotateY(45deg);
+    z-index: 1;
+    filter: brightness(0.7);
   }
 }
 
-.animate-fade-in-out {
-  animation: fade-in-out 8s linear infinite;
+.card-animate {
+  position: absolute;
+  animation: rotateCards 6s infinite;
+  transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1), left 0.6s, z-index 0.6s, filter 0.6s;
+  border-radius: 30px;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 10px 30px;
+}
+
+.card-img {
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.card-caption {
+  margin-top: 0.5rem;
+  text-align: center;
+  color: white;
+  font-size: 1rem;
+  font-weight: 300;
 }

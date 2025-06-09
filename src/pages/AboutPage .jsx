@@ -36,7 +36,7 @@ const AboutPage = () => {
       name="Rohan"
       highlightClass="text-colorfull"
       paragraphs={[
-        "I'm Aayush Bharti, a proactive full-stack developer passionate about creating dynamic web experiences...",
+        "I'm Rohan Ghadage, a proactive full-stack developer passionate about creating dynamic web experiences...",
         "When I'm not immersed in work, I'm exploring new ideas and staying curious...",
         "I believe in waking up each day eager to make a difference!",
       ]}
@@ -57,30 +57,30 @@ const AboutPage = () => {
           icon: <TwitterIcon />,
         },
         {
-          href: 'https://instagram.com/iaayushbharti',
+          href: 'https://www.instagram.com/rohang_1809/profilecard/?igsh=M3UydjJvYjEyMDMy',
           label: 'Instagram',
           icon: <InstagramIcon />,
         },
       ]}
       cards={[
         {
-          src: '/rohan.png',
+          src: 'profile 10.png',
           alt: 'Coding image',
-          caption: 'Coding is my superpower',
+          caption: 'I Code',
           zIndex: 3,
           animationDelay: '0s',
         },
         {
-          src: '/rohan1.png',
-          alt: 'Travel image',
-          caption: 'Exploring the world',
+          src: '/travel.jpeg',
+          alt: 'travel image',
+          caption: 'I Travel',
           zIndex: 2,
           animationDelay: '1s',
         },
         {
-          src: '/vite.svg',
-          alt: 'GYM image',
-          caption: 'Staying fit & strong',
+          src: '/fitness.jpg',
+          alt: 'fitness',
+          caption: 'I maintain myself',
           zIndex: 1,
           animationDelay: '2s',
         },
