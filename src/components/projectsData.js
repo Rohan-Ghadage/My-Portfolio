@@ -4,7 +4,7 @@ const projects = [
     title: 'Zenith Wave Fitness',
     description: 'A website crafted to offer a seamless, interactive, and engaging platform for fitness enthusiasts. Dive into a world of workouts, expert guidance, nutrition plans, and more.',
     link: '/projects/zenithwavefitness',
-    imgSrc: 'https://private-user-images.githubusercontent.com/177638345/382029758-261c268a-b991-4afb-baa4-b70f6c37f04e.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDkzMjE2NzgsIm5iZiI6MTc0OTMyMTM3OCwicGF0aCI6Ii8xNzc2MzgzNDUvMzgyMDI5NzU4LTI2MWMyNjhhLWI5OTEtNGFmYi1iYWE0LWI3MGY2YzM3ZjA0ZS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwNjA3JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDYwN1QxODM2MThaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT01NzgyN2MwNTY4NWNkOTFkOTMzYjI5Y2ZkZmI0ZjdmYTViY2JjYTkzYTJiYTEyODI2ZGVhMjg2ODFlZGI2ODdhJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.2kR2w2nhJFfuM9bOcatScox8wN5YnH71KCulkxUSU9I',
+    imgSrc: 'zenithwavefitness.png',
     gradient: 'linear-gradient(188.62deg, #3D1A7A 49.9%, #7E22CE 81.7%, #C084FC 93.88%, #F9D793 113.5%)',
     shadowColor: '#DB2777',
     textColor: 'text-white',
