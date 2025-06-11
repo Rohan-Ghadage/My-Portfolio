@@ -1,4 +1,6 @@
 import AboutSection from '../components/AboutSection';
+import ExperienceCard from '../components/ExperienceCard';
+import experienceData from '../components/experienceData';
 
 const LinkedinIcon = () => (
   <svg stroke="currentColor" fill="none" strokeWidth="1.5" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round" height="20" width="20">
@@ -31,6 +33,8 @@ const InstagramIcon = () => (
 
 const AboutPage = () => {
   return (
+    <>
+    
     <AboutSection
       title="More About Me"
       name="Rohan"
@@ -86,6 +90,25 @@ const AboutPage = () => {
         },
       ]}
     />
+
+    <div className="px-6 md:px-20 py-10 bg-[#0b0c10] text-white min-h-screen">
+      <section className=" text-white py-2 px-6 text-center relative">
+        <h4 className="uppercase text-sm tracking-widest text-gray-400 mb-2">
+          My
+        </h4>
+        <h2 className="text-4xl sm:text-5xl font-bold mb-12">
+          <em className="animated-gradient-text font-[NyghtSerif]">Work Experience</em>
+        </h2>
+      </section>
+      <div className="space-y-16">
+        {experienceData.map((exp, idx) => (
+          <ExperienceCard key={idx} {...exp} />
+        ))}
+      </div>
+    </div>
+    
+    </>
+    
   );
 };
 

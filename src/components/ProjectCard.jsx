@@ -22,8 +22,7 @@ const ProjectCard = ({ title, description, imgSrc, link, gradient, shadowColor, 
 
           <div
             className={`group relative flex size-full flex-col items-center justify-between overflow-hidden rounded-xl lg:rounded-2xl bg-linear-to-b from-black/40 to-transparent transition-all duration-300`}
-            // For gradient, you can apply dynamic style if needed here using props.gradient
-          >
+             >
             <div
               className="absolute inset-0 -z-1"
               style={{
