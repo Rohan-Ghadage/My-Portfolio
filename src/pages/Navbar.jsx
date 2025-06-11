@@ -6,8 +6,9 @@ import PopupModal from './PopupModal'; // 👈 EDITED (import popup modal compon
 const Navbar = () => {
   const navItems = [
     { label: 'Home', path: '/' },
-    { label: 'Work', path: '/projects' },
+    { label: 'Work', path: '/projects'},
     { label: 'About', path: '/about' },
+    { label: 'Resume', external: true, url: 'https://drive.google.com/drive/folders/1Tegz32KaeYLoaULvqj5AGcbqPp3AKmvj?usp=drive_link'},
     { label: 'Blog', path: '/blog' },
     { label: 'More', path: '/more' },
   ];
@@ -34,7 +35,23 @@ const Navbar = () => {
           {/* Center: Nav Items (Desktop) */}
           <div className="hidden md:flex gap-4">
             {navItems.map((item) => (
-              <Link
+              item.external ?
+              (
+                <a
+                  key={item.label}
+                  href={item.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`px-4 py-1.5 text-sm rounded-full transition-all duration-200 
+                    ${activePath === item.path
+                      ? `bg-white text-black font-medium`
+                      : `text-white hover:bg-white/10 hover:text-gray-200`}`}
+
+                >
+                  {item.label}
+                </a>
+              ) : (
+                <Link
                 key={item.label}
                 to={item.path}
                 onClick={() => setIsMenuOpen(false)}
@@ -45,7 +62,7 @@ const Navbar = () => {
                 `}
               >
                 {item.label}
-              </Link>
+              </Link>)
             ))}
 
             {/* Book a Call Button */}
