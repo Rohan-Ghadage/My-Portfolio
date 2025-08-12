@@ -47,6 +47,7 @@ const AboutSection = ({
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-neutral-300 transition-colors hover:text-neutral-100"
+                aria-label={`Visit ${label} profile`}
               >
                 <span className="sr-only">{label}</span>
                 {icon}

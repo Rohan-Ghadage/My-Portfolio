@@ -6,7 +6,6 @@ const ExperienceCard = ({
   company,
   location,
   workType,
-  remote,
   role,
   achievements,
   skills,
@@ -50,6 +49,9 @@ const ExperienceCard = ({
           ))}
         </ul>
 
+        <div>
+          <h3 className="text-xl ">Skills: </h3>
+        </div>
         <div className="flex flex-wrap gap-2 mt-4">
           {skills.map((skill) => (
             <span

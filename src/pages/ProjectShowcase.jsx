@@ -24,13 +24,14 @@ const ProjectShowcase = () => {
     };
 
     const observer = new IntersectionObserver(observerCallback, observerOptions);
+    const currentRefs = projectRefs.current;
 
-    projectRefs.current.forEach((ref) => {
+    currentRefs.forEach((ref) => {
       if (ref) observer.observe(ref);
     });
 
     return () => {
-      projectRefs.current.forEach((ref) => {
+      currentRefs.forEach((ref) => {
         if (ref) observer.unobserve(ref);
       });
     };

@@ -48,7 +48,7 @@ const Hero = ({setIsPopupOpen}) => {
             ➜
           </span>
         </button>
-        <span className="text-gray-400 text-sm sm:text-base">ghadagerohan07@gmail.com</span>
+        <span className="text-gray-400 text-sm sm:text-base">connect.rohanghadage@gmail.com</span>
       </div>
     </motion.section>
 

@@ -79,6 +79,8 @@ const Navbar = () => {
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="text-white"
+              aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+              aria-expanded={isMenuOpen}
             >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -101,18 +103,35 @@ const Navbar = () => {
             {/* Navigation Items */}
             <nav className="flex flex-col items-center gap-4 mt-8">
               {navItems.map((item) => (
-                <Link
-                  key={item.label}
-                  to={item.path}
-                  onClick={() => setIsMenuOpen(false)}
-                  className={`w-full text-center px-4 py-2 rounded-full text-sm transition-all duration-200
-                    ${activePath === item.path
-                      ? 'bg-white text-black font-semibold'
-                      : 'text-white hover:bg-white/10 hover:text-gray-200'}
-                  `}
-                >
-                  {item.label}
-                </Link>
+                item.external ? (
+                  <a
+                    key={item.label}
+                    href={item.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => setIsMenuOpen(false)}
+                    className={`w-full text-center px-4 py-2 rounded-full text-sm transition-all duration-200
+                      ${activePath === item.path
+                        ? 'bg-white text-black font-semibold'
+                        : 'text-white hover:bg-white/10 hover:text-gray-200'}
+                    `}
+                  >
+                    {item.label}
+                  </a>
+                ) : (
+                  <Link
+                    key={item.label}
+                    to={item.path}
+                    onClick={() => setIsMenuOpen(false)}
+                    className={`w-full text-center px-4 py-2 rounded-full text-sm transition-all duration-200
+                      ${activePath === item.path
+                        ? 'bg-white text-black font-semibold'
+                        : 'text-white hover:bg-white/10 hover:text-gray-200'}
+                    `}
+                  >
+                    {item.label}
+                  </Link>
+                )
               ))}
 
               {/* CTA */}

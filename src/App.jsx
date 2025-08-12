@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 import ContactSection from "./pages/ContactSection";
 import Footer from "./pages/Footer";
@@ -8,7 +8,7 @@ import Navbar from "./pages/Navbar";
 import ProjectShowcase from "./pages/ProjectShowcase";
 import TechStack from "./pages/TechStack";
 import PopupModal from "./pages/PopupModal"; // make sure to import your popup!
-import AboutPage from "./pages/AboutPage ";
+import AboutPage from "./pages/AboutPage";
 
 export default function App() {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
