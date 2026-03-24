@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { Routes, Route } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { Routes, Route, useLocation } from "react-router-dom";
 
 import ContactSection from "./pages/ContactSection";
 import Footer from "./pages/Footer";
@@ -12,6 +12,11 @@ import AboutPage from "./pages/AboutPage";
 
 export default function App() {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   return (
     

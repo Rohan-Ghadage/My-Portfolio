@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+html, body {
+  overflow-x: hidden;
+  background-color: #000;
+  color: #fff;
+}
+
 @keyframes gradient-shift {
   0% {
     background-position: 0% 50%;

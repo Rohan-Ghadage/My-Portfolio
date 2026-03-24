@@ -20,7 +20,7 @@ const experienceData = [
   },
   
   {
-    duration: "June 2025 - Present",
+    duration: "June 2025 - September 2025",
     logo: "foundinglabs.ai.png",
     company: "FoundingLabs.ai",
     location: "Jharkhand, India",
@@ -34,6 +34,25 @@ const experienceData = [
     ],
     skills: [
       'React.js', 'Node.js', 'GCP', 'AWS(S3, IAM)', 'Render', 'Postman', 'Git & GitHub',
+    ],
+  },
+  
+  
+  {
+    duration: "October 2025 - Present",
+    logo: "aiqlogo.jpg",
+    company: "AIQ",
+    location: "Kandiwali (Mumbai)",
+    workType: "On site",
+    role: "3. Full Stack Developer",
+    achievements: [
+      'Working on the core Industrial Projects',
+      'Exploring the different Technologies', 
+      'Working on the different types of OR Tools Projects',
+      
+    ],
+    skills: [
+      'React.js', 'Python', 'PostgreSQL', 'Docker', 'Postman', 'Git & GitHub', 'OR-Tools'
     ],
   },
   

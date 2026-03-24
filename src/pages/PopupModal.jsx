@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Mail, Linkedin, Github, Twitter, Instagram } from 'lucide-react';
+import { Mail, Phone, Linkedin, Github, Twitter, Instagram } from 'lucide-react';
 
 const PopupModal = ({ onClose }) => {
 
@@ -34,22 +34,40 @@ const PopupModal = ({ onClose }) => {
         {/* Content */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
 
-          {/* Left Side: Email Box */}
-          <a
-            href="mailto:connect.rohanghadage@gmail.com"
-            className="flex flex-col items-start bg-gradient-to-r from-[#151515] to-[#1f1f1f] border border-gray-600 rounded-lg p-6 w-full md:w-[60%] cursor-pointer hover:scale-105 transition"
-          >
-            <div className="flex items-center gap-2 mb-4 text-blue-400 font-semibold text-lg">
-              <Mail size={20} />
-              Email
-            </div>
-            <div className="text-white font-medium text-sm mb-1 truncate">
-              connect.rohanghadage@gmail.com
-            </div>
-            <div className="text-gray-400 text-sm">
-              Send me an email directly
-            </div>
-          </a>
+          {/* Left Side: Contact Boxes */}
+          <div className="flex flex-col gap-4 w-full md:w-[60%]">
+            <a
+              href="mailto:connect.rohanghadage@gmail.com"
+              className="flex flex-col items-start bg-gradient-to-r from-[#151515] to-[#1f1f1f] border border-gray-600 rounded-lg p-6 w-full cursor-pointer hover:scale-105 transition"
+            >
+              <div className="flex items-center gap-2 mb-4 text-blue-400 font-semibold text-lg">
+                <Mail size={20} />
+                Email
+              </div>
+              <div className="text-white font-medium text-sm mb-1 truncate">
+                connect.rohanghadage@gmail.com
+              </div>
+              <div className="text-gray-400 text-sm">
+                Send me an email directly
+              </div>
+            </a>
+
+            <a
+              href="tel:+918329503580"
+              className="flex flex-col items-start bg-gradient-to-r from-[#151515] to-[#1f1f1f] border border-gray-600 rounded-lg p-6 w-full cursor-pointer hover:scale-105 transition"
+            >
+              <div className="flex items-center gap-2 mb-4 text-green-400 font-semibold text-lg">
+                <Phone size={20} />
+                Phone
+              </div>
+              <div className="text-white font-medium text-sm mb-1 truncate">
+                +91 8329503580
+              </div>
+              <div className="text-gray-400 text-sm">
+                Call or message me
+              </div>
+            </a>
+          </div>
 
           {/* Right Side: Social Icons — horizontal in all modes */}
           <div className="flex flex-row flex-wrap gap-6 justify-center items-center w-full md:w-[35%]">
