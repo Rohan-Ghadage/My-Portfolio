@@ -11,6 +11,8 @@ const ProjectCard = ({ title, description, imgSrc, link, gradient, shadowColor, 
           draggable={false}
           className="relative cursor-pointer overflow-hidden rounded-2xl border border-white/15 bg-[#f2f2f20c] p-1.5 shadow-2xl lg:h-[560px] lg:rounded-3xl lg:p-2"
           href={link}
+          target="_blank"
+          rel="noopener noreferrer"
         >
           <div
             className="absolute inset-x-0 top-0 h-px"

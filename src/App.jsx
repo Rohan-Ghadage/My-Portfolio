@@ -38,14 +38,7 @@ export default function App() {
           {/* About route */}
           <Route path="/about" element={<AboutPage />} />
           <Route path="/projects" element={<ProjectShowcase />} />
-          <Route
-            path="/blog"
-            element={<div className="p-10 text-center text-3xl">Blog Page Coming Soon</div>}
-          />
-          <Route
-            path="/more"
-            element={<div className="p-10 text-center text-3xl">More Page Coming Soon</div>}
-          />
+
         </Routes>
 
         {/* Contact and Footer outside Routes */}

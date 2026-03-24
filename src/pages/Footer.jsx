@@ -139,9 +139,7 @@ const Footer = ({setIsPopupOpen}) => {
                 <li className="hover:text-text-primary">
                   <a href="/projects" className="footer-link">Projects</a>
                 </li>
-                <li className="hover:text-text-primary">
-                  <a href="/blog" className="footer-link">Blog</a>
-                </li>
+
               </ul>
             </div>
 
@@ -180,9 +178,7 @@ const Footer = ({setIsPopupOpen}) => {
                     Contact
                   </a>
                 </li>
-                <li className="hover:text-text-primary">
-                  <a href="/more" className="footer-link">Links</a>
-                </li>
+
                 
               </ul>
             </div>

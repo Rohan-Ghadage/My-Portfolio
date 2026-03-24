@@ -9,8 +9,7 @@ const Navbar = () => {
     { label: 'Work', path: '/projects'},
     { label: 'About', path: '/about' },
     { label: 'Resume', external: true, url: 'https://drive.google.com/drive/folders/1Tegz32KaeYLoaULvqj5AGcbqPp3AKmvj?usp=drive_link'},
-    { label: 'Blog', path: '/blog' },
-    { label: 'More', path: '/more' },
+
   ];
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
